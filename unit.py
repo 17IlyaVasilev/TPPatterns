@@ -1,8 +1,4 @@
-import sys
-import random
-import time
 import unittest
-import collections
 from abc import ABC, abstractmethod
 
 
@@ -368,67 +364,58 @@ class CRGolem(IRWarrior):
     tip = "RG"
 
 
-class CFactoryLWarriors():
+class IFactoryWarriors():
     @abstractmethod
     def create(self):
         pass
 
 
-class CFactoryLInfantry(CFactoryLWarriors):
+class CFactoryLInfantry(IFactoryWarriors):
     def create(self):
         return CLInfantry()
 
 
-class CFactoryLArcher(CFactoryLWarriors):
+class CFactoryLArcher(IFactoryWarriors):
     def create(self):
         return CLArcher()
 
 
-class CFactoryLHorseman(CFactoryLWarriors):
+class CFactoryLHorseman(IFactoryWarriors):
     def create(self):
         return CLHorseman()
 
 
-class CFactoryLDragon(CFactoryLWarriors):
+class CFactoryLDragon(IFactoryWarriors):
     def create(self):
         return CLDragon()
 
 
-class CFactoryLGolem(CFactoryLWarriors):
+class CFactoryLGolem(IFactoryWarriors):
     def create(self):
         return CLGolem()
 
 
-
-
-
-class CFactoryRWarriors():
-    @abstractmethod
-    def create(self):
-        pass
-
-
-class CFactoryRInfantry(CFactoryRWarriors):
+class CFactoryRInfantry(IFactoryWarriors):
     def create(self):
         return CRInfantry()
 
 
-class CFactoryRArcher(CFactoryRWarriors):
+class CFactoryRArcher(IFactoryWarriors):
     def create(self):
         return CRArcher()
 
 
-class CFactoryRHorseman(CFactoryRWarriors):
+class CFactoryRHorseman(IFactoryWarriors):
     def create(self):
         return CRHorseman()
 
 
-class CFactoryRDragon(CFactoryRWarriors):
+class CFactoryRDragon(IFactoryWarriors):
     def create(self):
         return CRDragon()
 
 
-class CFactoryRGolem(CFactoryRWarriors):
+class CFactoryRGolem(IFactoryWarriors):
     def create(self):
         return CRGolem()
 
