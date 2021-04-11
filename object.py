@@ -56,6 +56,9 @@ class ICastle:
                 self.D -= 1
         self.Army = temp
 
+    def updateLVL(self):
+        self.LVL += 1
+
     def getI(self):
         return self.I
 
