@@ -11,12 +11,13 @@ pygame.init()
 window = pygame.display.set_mode((1280, 640))
 screen = pygame.Surface((1280, 640))
 
-bigfont = pygame.font.SysFont('monospace', 100)
-myfont = pygame.font.SysFont('monospace', 50)
-smallfont = pygame.font.SysFont('monospace', 30)
-efont = pygame.font.SysFont('elephant', 30)
-befont = pygame.font.SysFont('elephant', 50)
-bigefont = pygame.font.SysFont('elephant', 100)
+bigfont = pygame.font.Font('imgs/font.ttf', 100)
+myfont = pygame.font.Font('imgs/font.ttf', 50)
+smallfont = pygame.font.Font('imgs/font.ttf', 30)
+semallfont = pygame.font.Font('imgs/font.ttf', 20)
+efont = pygame.font.Font('imgs/font.ttf', 30)
+befont = pygame.font.Font('imgs/font.ttf', 40)
+bigefont = pygame.font.Font('imgs/font.ttf', 100)
 
 def start():
     screen.fill((255, 255, 255))
@@ -360,7 +361,7 @@ def updateunit():
 
 
 def updateCost():
-    cost = pygame.Surface((640, 120))
+    cost = pygame.Surface((700, 120))
     cost.fill((255, 255, 255))
 
     I = pygame.Surface((180, 40))
@@ -418,10 +419,10 @@ def updateCost():
     GM.blit(img.GM, (0, 0))
     GM.blit(efont.render(" " + str(object.CGodMode.cost), False, (0, 0, 0)), (40, 5))
 
-    LU = pygame.Surface((140, 40))
+    LU = pygame.Surface((180, 40))
     LU.fill((255, 255, 255))
     LU.blit(img.LU, (0, 0))
-    LU.blit(efont.render(" LVL * 10", False, (0, 0, 0)), (40, 5))
+    LU.blit(smallfont.render(" LVL * 10", False, (0, 0, 0)), (40, 5))
 
     cost.blit(I, (0, 0))
     cost.blit(A, (0, 40))
